@@ -1,0 +1,223 @@
+*{
+    margin: 0;/* page er margine less korle*/
+    padding: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/cover.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav img{
+    width: 290px;
+}
+nav{
+    display: flex;/* nav e iteam gulo pasha pasha chole ashbe like pic and div*/
+    justify-content: space-between;/* nav bar er iteam page e soman durotte stay korbe*/
+    padding: 2% 6%;
+    align-items: center;
+    /* nav bar er moddhe iteam gulo somantoral thakbe*/
+}
+.nav-list ul li {
+    list-style: none;
+   display: inline-block; /*list gulo pasha pashi rakhte&*/
+    padding:5px 12px ;
+
+}
+.nav-list ul li a{
+    text-decoration: none;
+    color: beige;
+    font-size:14px;
+
+}
+.nav-list ul li::after{
+    content: '';
+    width: 0%;/*height width hocche link er niche lines er */
+    height: 2px;;
+    background-color:orangered;/* ar lin tai hoccche bg color.tobe color ta lekhar pechone n eshe nice ashbe because of after content*/
+    margin: auto;
+    display: block;
+    transition: 0.5s;
+}
+
+.nav-list ul li:hover::after{
+
+    width: 100%;/*hober korle width ashbe background line er.onno thay ashbe na tai oikhane width 0 disi*/
+    transition: 0.5s;/*cursol link e rakhar por pori chole ashbe na.ektu pore animation er moto ashbe*/
+}
+.text-box{
+    width: 90%;
+    color: darkgray;
+    position:absolute ;/*absulate diye permission nilam text take ghuranor jonno.*/
+    top: 50%;
+    left: 50%;/* and top ar left e position moto text take bosiye nilam*/
+    transform: translate(-50%,-50%);
+    text-align: center;
+   /* margin: auto;
+   padding-top: 250px;
+   text-align: center;
+
+   evabeo korte parri*/
+}
+.text-box h1{
+    font-size: 52px;
+}
+.text-box p{
+    font-size: 14px;
+}
+.btn{
+    text-decoration: none;
+    color: floralwhite;
+    padding: 4px 12px;
+    display: inline-block;
+    border: 2px solid white;
+    color:white;
+    font-size: medium;
+}
+.btn:hover{
+    background: orangered;
+    transition: 1s;
+    border:2px solid orangered;
+}
+    
+nav .fas{
+    display:none;
+}
+
+
+@media (max-width: 700px) {
+    .header{
+        overflow: hidden;
+    }
+    .text-box h1{
+        font-size: 20px;
+    }
+    .nav-list ul li{
+        display: block;
+    }
+    .nav-list{
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+        
+    }
+    nav .fas{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-list ul{
+        padding: 30px;
+    }
+}
+
+/* ########################################### course ###################################################*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.course h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+.course p{
+    padding: 10px;
+    font-size:18px;
+   
+    line-height: 22px;
+}
+.para{
+    margin-bottom: 90px;
+}
+.course-col{
+    background-color: blanchedalmond;
+    border-radius: 12px;
+    padding: 20px 12px;
+  
+    cursor: pointer;
+    flex-basis: 30%;
+    z-index: 1;
+}
+.service-log{
+    margin: -90px auto 0; 
+    height: 130px;
+    width: 130px;
+    border: 18px solid white;
+    border-radius: 50%;
+}
+.service-log img{
+    width: 100%;
+
+}
+.course h3{
+    height: 35px;
+    width: 80%;
+    background-color: #ffebcd ;
+    text-align: center;
+    margin: 50px auto;
+    position: relative;
+    
+   
+}
+.course h3::after{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    background:linear-gradient(to right,#007bff,#fff);
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    z-index: -1;
+   
+   
+    
+}
+.course h3::before{
+    content: "";
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    background:linear-gradient(to right,#007bff,#fff);
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+    z-index: -1;
+   
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    
+    
+}
+
+.row{
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+@media (max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+    .course-col{
+        margin-bottom: 90px;
+    }
+}
